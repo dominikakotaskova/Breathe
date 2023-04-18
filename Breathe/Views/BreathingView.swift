@@ -42,6 +42,7 @@ struct BreathingView: View {
                         .foregroundColor(.black)
                 }
             }
+            .padding()
             
             
             NavigationLink(destination: FinishView(session: session).navigationBarBackButtonHidden(true)) {

@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @State var showingApp = false
+        
     var body: some View {
         ZStack {
             Color(.yellow).opacity(0.08)
@@ -30,9 +29,10 @@ struct ContentView: View {
                 
             }
             .padding()
+            .scrollIndicators(.hidden)
         }
     }
-    }
+}
 
  
 
@@ -40,7 +40,6 @@ struct ContentView: View {
 
 struct HorizontalSectionView: View {
     var sessions: [BreathingSession]
-//    @State var showingSheet = false
     @State var selectedSession: BreathingSession
     
     var body: some View {
@@ -51,7 +50,6 @@ struct HorizontalSectionView: View {
                                 ItemView(text: item.title)
                                     .frame(width: 160, height: 200)
                             }
-                            
                         }
                     }
         }
@@ -64,13 +62,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-
-
-/*
- ForEach(sessions) { item in
-     NavigationLink(destination: BreathingView(session: item)) {
-         ItemView(text: item.title)
-             .frame(width: 160, height: 200)
-     }
- }
- */
