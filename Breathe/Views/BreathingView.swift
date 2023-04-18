@@ -23,8 +23,7 @@ struct BreathingView: View {
             
             Spacer()
 
-            Circle()
-                .strokeBorder(lineWidth: 20)
+            Lottie(name: "breathe")
                 .frame(width: 300, height: 300)
     
             

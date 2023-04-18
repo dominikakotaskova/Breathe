@@ -11,12 +11,15 @@ struct ContentView: View {
         
     var body: some View {
         ZStack {
-            Color(.yellow).opacity(0.08)
+            Color(.blue).opacity(0.08)
                 .edgesIgnoringSafeArea(.all)
             
             ScrollView {
                 
                 WelcomeText(headline: "Good morning", text: "Take a moment for yourself.")
+                
+                Lottie(name: "sun")
+                    .frame(width: 300, height: 100, alignment: .leading)
                 
                 CategoryTitle(text: "Relax")
                 HorizontalSectionView(sessions: BreathingSession.relaxSessions, selectedSession: BreathingSession.relaxSessions[0])
