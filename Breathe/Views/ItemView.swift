@@ -13,7 +13,9 @@ struct ItemView: View {
     var body: some View {
         
         ZStack {
-            Color(.black).opacity(0.8)
+            RoundedRectangle(cornerRadius: 20)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .foregroundColor(.black).opacity(0.7)
             VStack {
                 Text(text)
                     .foregroundColor(Color("WhiteText"))

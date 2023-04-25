@@ -15,7 +15,6 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(.all)
             
             ScrollView {
-                
                 WelcomeText(headline: "Good morning", text: "Take a moment for yourself.")
                 
                 Lottie(name: "sun")
@@ -31,7 +30,6 @@ struct ContentView: View {
                 HorizontalSectionView(sessions: BreathingSession.sleepSessions, selectedSession: BreathingSession.sleepSessions[0])
                 
             }
-            .padding()
             .scrollIndicators(.hidden)
         }
     }
@@ -47,14 +45,16 @@ struct HorizontalSectionView: View {
     
     var body: some View {
         ScrollView(.horizontal) {
-                    HStack {
-                        ForEach(sessions) { item in
-                            NavigationLink(destination: BeginView(session: item)) {
-                                ItemView(text: item.title)
-                                    .frame(width: 160, height: 200)
-                            }
-                        }
+            HStack(spacing: 0) {
+                ForEach(sessions) { item in
+                    NavigationLink(destination: BeginView(session: item)) {
+                        ItemView(text: item.title)
+                            .frame(width: 160, height: 200)
+                            .padding(.leading, 10)
+                            .padding(.bottom, 10)
                     }
+                }
+            }
         }
     }
 }

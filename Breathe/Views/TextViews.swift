@@ -15,6 +15,7 @@ struct CategoryTitle: View {
             .bold()
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.top, 20)
+            .padding(.leading, 10)
     }
 }
 
@@ -30,6 +31,7 @@ struct WelcomeText: View {
             Text(text)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
+        .padding(.leading, 10)
     }
 }
 
